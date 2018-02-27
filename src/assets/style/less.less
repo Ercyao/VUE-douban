@@ -1,0 +1,122 @@
+
+@blue:#37a;
+@green:#3ba94d;
+.border(@top,@bottom,@left,@right){
+    border-top: @top;
+    border-bottom: @bottom;
+    border-left: @left;
+    border-right: @right;
+    border-style: solid;
+    border-color: #F3F3F3;
+}
+//超过n行显示省略号
+.ellipsis (@n) {
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:@n; 
+}
+
+////no
+//@headtop:10rem;
+////no
+//
+//
+//.botshadow{box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);}
+//
+//.bdgray{border: 1px solid;border-color: #DCDCDC;}
+//.act{color:@red; background: #fff0f0;border-color:@red!important;}
+//  
+//.border-radius (@radius) {
+//border-radius: @radius;
+//-moz-border-radius: @radius;
+//-webkit-border-radius: @radius;
+//}
+//
+//.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+//box-shadow: @arguments;
+//-moz-box-shadow: @arguments;
+//-webkit-box-shadow: @arguments;
+//}
+//
+//
+//
+//
+//.allcolor {background: #f8838c;}
+//.nearbycolor{background: #c0ee93;}
+//.weekendscolor{background: #c7dcff;}
+//
+//
+////.box{margin:10rem 0 12rem ;}
+//.index_box {width: 100%; padding: 3%;}
+
+
+
+
+
+
+
+
+// 背景图片地址和大小
+.bis(@url) { 
+    background-image: url(@url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.borderRadius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+//定位全屏
+.allcover{
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+//定位上下左右居中
+.center {  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+.ct {  
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//定位上下居中
+.cl {  
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+//宽高
+.wh(@width, @height){
+    width: @width;
+    height: @height;
+}
+
+
+//字体大小，颜色
+.sc(@size, @color){
+    font-size: @size;
+    color: @color;
+}
+
+//flex 布局和 子元素 对其方式
+.flex(@type: space-between){
+    display: flex;
+    justify-content: @type;
+
+}

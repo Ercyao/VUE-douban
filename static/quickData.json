@@ -1,0 +1,32 @@
+[
+	{
+		"name":"租房找室友","url":"https://m.douban.com/group/explore/rent/"
+	},
+	{
+		"name":"来聊五块钱","url":"https://m.douban.com/group/explore/chat/"
+	},
+	{
+		"name":"生活在别处","url":"https://m.douban.com/group/explore/livingaboard/"
+	},
+	{
+		"name":"同城活动","url":"https://beijing.douban.com/"
+	},
+	{
+		"name":"近期值得看的国产剧","url":"https://m.douban.com/tv/chinese/"
+	},
+	{
+		"name":"近期值得看的美剧","url":"https://m.douban.com/tv/american/"
+	},
+	{
+		"name":"华语新碟榜","url":"https://m.douban.com/music/newchinese/"
+	},
+	{
+		"name":"欧美新碟榜","url":"https://m.douban.com/music/newwestern/"
+	},
+	{
+		"name":"日韩新碟榜","url":"https://m.douban.com/music/newjapankorean/"
+	},
+	{
+		"name":"豆瓣日历","url":"https://market.douban.com/campaign/calendar2018?utm_campaign=home_market&utm_source=douban&utm_medium=mobile_web"
+	}
+]

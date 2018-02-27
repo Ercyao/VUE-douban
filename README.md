@@ -13,12 +13,12 @@ vue项目，豆瓣，配置代理服务器进行跨域
 
 # 效果图
 
-![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/1-1.jpg)
-![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/1-2.jpg)
-![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/1-3.jpg)
-![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/2-1.jpg)
-![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/2-2.jpg)
-![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/3-1.jpg)
-![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/3-2.jpg)
-![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/4-1.jpg)
+![](https://github.com/Ercyao/vue-douban/blob/master/screenshot/1.jpg)
+![](https://github.com/Ercyao/vue-douban/blob/master/screenshot/2.jpg)
+![](https://github.com/Ercyao/vue-douban/blob/master/screenshot/3.jpg)
+![](https://github.com/Ercyao/vue-douban/blob/master/screenshot/4.jpg)
+![](https://github.com/Ercyao/vue-douban/blob/master/screenshot/5.jpg)
+![](https://github.com/Ercyao/vue-douban/blob/master/screenshot/6.jpg)
+![](https://github.com/Ercyao/vue-douban/blob/master/screenshot/7.jpg)
+
 

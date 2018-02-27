@@ -1,30 +1,24 @@
 # vue-douban
+vue项目，豆瓣，配置代理服务器进行跨域
 
-> A Vue.js project
+# 提示
 
-## Build Setup
+>  npm install     安装依赖（若有些依赖还是没安装，请根据package.json文件单独安装依赖）
 
-``` bash
-# install dependencies
-npm install
+>  npm run dev    运行
 
-# serve with hot reload at localhost:8080
-npm run dev
+>  npm run build  打包
 
-# build for production with minification
-npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
 
-# run unit tests
-npm run unit
+# 效果图
 
-# run e2e tests
-npm run e2e
+![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/1-1.jpg)
+![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/1-2.jpg)
+![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/1-3.jpg)
+![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/2-1.jpg)
+![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/2-2.jpg)
+![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/3-1.jpg)
+![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/3-2.jpg)
+![](https://github.com/Ercyao/REACT-kgmusic/blob/master/img/4-1.jpg)
 
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

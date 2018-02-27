@@ -12,6 +12,7 @@ vue2 + vue-router + less + ES6 + webpack + fetch + await
 
 >  npm run build  打包
 
+访问 http://localhost:8080
 
 
 # 效果图

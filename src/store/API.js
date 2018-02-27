@@ -49,28 +49,3 @@ export const getMovieRoot = (q) => fetch('/api/movie/search?count=3&q=' + q);
 //搜索分类
 export const getSearchClass=()=> fetch('/static/searchClass.json');
 
-
-////热门话题
-////export const getHotTopic = (start,count) => fetch('/api/gallery/hot_items/' + start + count);
-//export const getHotTopic = (start,count) => fetch('/rex_api/gallery/hot_items?ck=null&start=' + start + '&count=' + count);
-//
-//export const getRecTopic = (start,count) => fetch('/rex_api/gallery/rec_topics?start=' + start + '&count=' + count);
-//
-//
-////热映中
-//export const getFilmLive = () => fetch('/api/movie/in_theaters');
-////北美榜单
-//export const getFilmUsBox = () => fetch('/api/movie/us_box');
-////获取top250
-//export const getFilmRoot = (start,count) => fetch('/api/movie/top250/' + start + count);
-////获取电影详情
-//export const getFilmDetail = (id) => fetch('/api/movie/subject/' + id);
-//
-//
-////根据tag获取图书
-//export const getBookRoot = (q) => fetch('/api/book/search?count=10&q=' + q);
-//export const getBooksData = (id) => fetch('/api/book/' + id);
-//
-////根据tag获取音乐
-//export const getMusicRoot = (tag) => fetch('/api/music/search' + tag);
-//export const getMusicsData = (id) => fetch('/api/music/' + id);

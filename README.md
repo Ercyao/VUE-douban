@@ -1,6 +1,9 @@
 # vue-douban
 vue项目，豆瓣，配置代理服务器进行跨域
 
+# 技术栈
+vue2 + vue-router + less + ES6 + webpack + fetch + await 
+
 # 提示
 
 >  npm install     安装依赖（若有些依赖还是没安装，请根据package.json文件单独安装依赖）

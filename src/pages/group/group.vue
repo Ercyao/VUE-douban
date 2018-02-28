@@ -44,14 +44,14 @@
 	   },
 		methods: {
 			async getGroupData(){
-                let Groups = await getGroups().then(res => res.json());
-				this.Groups = Groups.rec_groups[0].classified_groups;
+           let Groups = await getGroups().then(res => res.json());
+				   this.Groups = Groups.rec_groups[0].classified_groups;
 
-                this.hideLoading();
-         	},
-            hideLoading(){
-                this.showLoading = false;
-            }
+           this.hideLoading();
+      },
+      hideLoading(){
+           this.showLoading = false;
+      }
 		}
 	}
 </script>

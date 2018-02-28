@@ -51,16 +51,7 @@
 	export default{
 		data(){
 			return {
-//              id: 1220562,
-//              BookData:null,
-//			    FilmLive:null,
-//			    rec_start:0,
-//              rec_count:4,
-//              hot_start:0,
-//              hot_count:10,
-//			    RecTopic:null,   //话题广场
-//			    HotTopic:null,   //话题精选动态
-				isShow:false,
+				  isShow:false,
 			    showLoading:true,
 			    downFlag:false,
 			    next_date:'',
@@ -81,46 +72,20 @@
 		created(){
 			this.getBookData();
 			this.beforeDate();
-	    },
-	    mounted () {
-		  window.addEventListener('scroll', this.goTopScroll)
-		  this.$nextTick(function () {
-	      window.addEventListener('scroll', this.goTopScroll)
-	    })
-		},
+	  },
 		methods: {
-			async getBookData(){
-//              let RecTopicData  = await getRecTopic(this.rec_start,this.rec_count).then(res => res.json());
-//              this.RecTopic = RecTopicData.items;
-//              let HotTopicData = await getHotTopic(this.hot_start,this.hot_count).then(res => res.json());
-//              this.HotTopic = HotTopicData.items;
-                
+			async getBookData(){               
                 let Recommend = await getRecommend(this.next_date).then(res => res.json());
                 this.Recommend = Recommend.recommend_feeds;
                 this.next_date = Recommend.date;
                 this.AllData.push({time: this.next_date, data: this.Recommend});
-                this.hideLoading();
-                
-                
+
                 this.QuickData = await getQuickData().then(res => res.json());
                 let i = Math.floor(Math.random()*10);
                 this.QuickName= this.QuickData[i].name;
                 this.QuickUrl= this.QuickData[i].url;
-//              this.QuickData =
-//              console.log(Recommend)
-//              console.log(QuickData)
-//              let len = this.AllData[0].data.length
-//              for(var i=0;i<len;i++ ){
-//              	console.log(this.AllData[0].data[i].target)
-//              }
-//              console.log(Recommend)
-//      		if (this.id) {
-//			     	this.BookData = await getBookData(this.id).then(res => res.json());
-//				}
-			    
-//			    let data = await getFilmLive().then(res => res.json());
-//			    this.FilmLive = data.subjects
-//				this.hideLoading();
+
+        				this.hideLoading();
            },
             //加载更多
             async loaderMore(){
@@ -145,34 +110,8 @@
                 d = +d - 1000*60*60*24;       
                 d = new Date(d);         
                 this.next_date = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
-            },
-
-            goTopScroll () {
-//          	if(document.body.scrollTop>0){
-//          		document.body.scrollTop=0
-//          	}
-var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-                if (scrollTop > 500) {
-				    this.isShow = true;
-				    this.downFlag=false;
-				} else {
-				    this.isShow = false
-				}
-//var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-//console.log(scrollTop)
-},
-//               // 注册scroll事件并监听     
-//               window.addEventListener('scroll',()=>{      
-//                 	 console.log(document.documentElement.clientHeight+'-----------'+window.innerHeight); // 可视区域高度      
-//                 	 console.log(document.body.scrollTop); // 滚动高度        
-//                 	 console.log(document.body.offsetHeight); // 文档高度
-//               	if(document.body.scrollTop + window.innerHeight >= document.body.offsetHeight) {  
-//               		console.log(111);
-//               	}
-//      }
-
-
-		}
+            }
+		  }
 	}
 </script>
 

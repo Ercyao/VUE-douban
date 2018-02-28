@@ -73,14 +73,14 @@
 	   },
 		methods: {
 			async getMovieData(){
-                let Broadcast = await getBroadcast().then(res => res.json());
-                this.Broadcast = Broadcast.items;
+            let Broadcast = await getBroadcast().then(res => res.json());
+            this.Broadcast = Broadcast.items;
 
-                this.hideLoading();
-         	},
-            hideLoading(){
-                this.showLoading = false;
-            }
+            this.hideLoading();
+      },
+      hideLoading(){
+           this.showLoading = false;
+      }
 		}
 	}
 </script>

@@ -72,19 +72,19 @@
                 this.ProductBookHUrl = ProductBookHeader.url;
                 this.ProductBookHImg = ProductBookHeader.cover.url;
                 this.ProductBookHPrice = ProductBookHeader.price;
-		        this.ProductBookHTitle =  ProductBookHeader.title;
-		        this.ProductBookHInfo =  ProductBookHeader.info;
-				//发现好电影
-				let InterestsData = await getInterestsData().then(res => res.json());
-				this.booksInterests = InterestsData[0].books;
-				//分类浏览
-				this.BookClass = await getBookClass().then(res => res.json());
+		            this.ProductBookHTitle =  ProductBookHeader.title;
+		            this.ProductBookHInfo =  ProductBookHeader.info;
+				        //发现好电影
+				        let InterestsData = await getInterestsData().then(res => res.json());
+				        this.booksInterests = InterestsData[0].books;
+				        //分类浏览
+				        this.BookClass = await getBookClass().then(res => res.json());
 				
                 this.hideLoading();
-         	},
-            hideLoading(){
+     	},
+      hideLoading(){
                 this.showLoading = false;
-            }
+      }
 		}
 	}
 </script>

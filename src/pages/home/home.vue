@@ -60,8 +60,6 @@
 			    QuickData:null,
 			    QuickName:null,
 			    QuickUrl:null,
-			    
-			   
 			}
 		},
 		components: {

@@ -47,8 +47,8 @@
 					let MovieRoot = await getMovieRoot(this.keyword).then(res => res.json());
 					this.MovieRoot = MovieRoot.subjects;
 				}
-            },
-            SearchResult(){
+      },
+      SearchResult(){
 				this.getSearchData();
 				this.ShowSearchClass = false;
 			}

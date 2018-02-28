@@ -49,8 +49,8 @@
 				}
       },
       SearchResult(){
-				this.getSearchData();
-				this.ShowSearchClass = false;
+				 this.getSearchData();
+				 this.ShowSearchClass = false;
 			}
 		}
 	}

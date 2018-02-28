@@ -116,7 +116,6 @@
 <style lang="less" scoped>
     @import '../../assets/style/less.less';
     
-    
     .quick-nav {
 	    overflow: hidden;
 	    padding: .5rem 0 2rem;

@@ -43,27 +43,27 @@
 			this.getMovieData();
 	   },
 		methods: {
-			async getMovieData(){
-                //影院热映
-                let MovieShowing = await getMovieShowing().then(res => res.json());
-                this.MovieShowing = MovieShowing.subject_collection_items;
-                //免费在线观影
-                let MovieFreeStream = await getMovieFreeStream().then(res => res.json());
-                this.MovieFreeStream = MovieFreeStream.subject_collection_items;
-                //新片速递
-                let MovieLatest = await getMovieLatest().then(res => res.json());
-                this.MovieLatest = MovieLatest.subject_collection_items;
-				//发现好电影
-				let InterestsData = await getInterestsData().then(res => res.json());
-				this.movieInterests = InterestsData[0].movie;
-				//分类浏览
-				this.MovieClass = await getMovieClass().then(res => res.json());
+			 async getMovieData(){
+           //影院热映
+           let MovieShowing = await getMovieShowing().then(res => res.json());
+           this.MovieShowing = MovieShowing.subject_collection_items;
+           //免费在线观影
+           let MovieFreeStream = await getMovieFreeStream().then(res => res.json());
+           this.MovieFreeStream = MovieFreeStream.subject_collection_items;
+           //新片速递
+           let MovieLatest = await getMovieLatest().then(res => res.json());
+           this.MovieLatest = MovieLatest.subject_collection_items;
+				   //发现好电影
+				   let InterestsData = await getInterestsData().then(res => res.json());
+				   this.movieInterests = InterestsData[0].movie;
+				   //分类浏览
+				   this.MovieClass = await getMovieClass().then(res => res.json());
 				
-                this.hideLoading();
-         	},
-            hideLoading(){
-                this.showLoading = false;
-            }
+           this.hideLoading();
+      },
+      hideLoading(){
+           this.showLoading = false;
+      }
 		}
 	}
 </script>

@@ -1,0 +1,74 @@
+[
+	{
+		"name":"电影",
+		"des":"影院热映",
+		"url":"/movie",
+		"color":"rgb(35, 132, 232)"
+	},
+	{
+		"name":"电视",
+		"des":"正在热播",
+		"url":"https://m.douban.com/tv",
+		"color":"rgb(122, 106, 219)"
+	},
+	{
+		"name":"图书",
+		"des":"畅销排行",
+		"url":"/books",
+		"color":"rgb(159, 120, 96)"
+	},
+	{
+		"name":"同城",
+		"des":"周末活动",
+		"url":"https://douban.com/location",
+		"color":"rgb(230, 70, 126)"
+	},
+	{
+		"name":"小组",
+		"des":"志趣相同",
+		"url":"/group",
+		"color":"rgb(42, 184, 204)"
+	},
+	{
+		"name":"音乐",
+		"des":"新碟",
+		"url":"https://m.douban.com/music",
+		"color":"rgb(244, 143, 46)"
+	},
+	{
+		"name":"阅读",
+		"des":"电子书",
+		"url":"https://read.douban.com",
+		"color":"rgb(159, 120, 96)"
+	},
+	{
+		"name":"游戏",
+		"des":"虚拟世界",
+		"url":"https://m.douban.com/game",
+		"color":"rgb(87, 116, 197)"
+	},
+	{
+		"name":"应用",
+		"des":"玩手机",
+		"url":"https://m.douban.com/mobileapp",
+		"color":"rgb(89, 108, 221)"
+	},
+	{
+		"name":"广播",
+		"des":"友邻动态",
+		"url":"/broadcast",
+		"color":"rgb(225, 100, 77)"
+	},
+	{
+		"name":"FM",
+		"des":"红心歌单",
+		"url":"https://douban.fm",
+		"color":"rgb(64, 207, 169)"
+	},
+	{
+		"name":"市集",
+		"des":"购买原创",
+		"url":"https://market.douban.com/?utm_campaign=mobile_web_douban_nav&utm_source=douban&utm_medium=mobile_web",
+		"color":"rgb(66, 189, 86)"
+	}
+]

@@ -46,7 +46,7 @@
 	import loading from '@/components/loading'
 	import headerNav from '@/components/header'
 	import drownApp from '@/components/drownapp'
-	import {getBookData,getHotTopic,getFilmLive,getRecTopic,getRecommend,getQuickData} from '@/store/API'
+	import {getRecommend,getQuickData} from '@/store/API'
 	
 	export default{
 		data(){
@@ -108,8 +108,11 @@
                 d = +d - 1000*60*60*24;       
                 d = new Date(d);         
                 this.next_date = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
-            }
+            },
+goTopScroll(){
+}
 		  }
+
 	}
 </script>
 

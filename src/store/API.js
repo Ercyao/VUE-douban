@@ -23,11 +23,11 @@ export const getMovieClass = () => fetch('/static/movieClass.json')
 /* 图书 */
 
 // 最受关注图书-虚构
-export const getBookFiction = () => fetch('/rex_api/subject_collection/book_fiction/items?os=ios&start=0&count=8&loc_id=0&_=0')
+export const getBookFiction = () => fetch('/rex_api/subject_collection/book_fiction/items?os=ios&callback=jsonp1&start=0&count=8&loc_id=0&_=1550486358341')
 // 最受关注图书-非虚构
-export const getBookNoFiction = () => fetch('/rex_api/subject_collection/book_nonfiction/items?os=ios&start=0&count=8&loc_id=0&_=0')
+export const getBookNoFiction = () => fetch('/rex_api/subject_collection/book_nonfiction/items?os=ios&callback=jsonp2&start=0&count=8&loc_id=0&_=1550486358342')
 // 豆瓣书店
-export const getProductBook = () => fetch('/rex_api/subject_collection/market_product_book_mobile_web/items?os=ios&start=0&count=8&loc_id=0&_=0')
+export const getProductBook = () => fetch('/rex_api/subject_collection/market_product_book_mobile_web/items?os=ios&callback=jsonp3&start=0&count=8&loc_id=0&_=1550486358342')
 // 图书分类
 export const getBookClass = () => fetch('/static/bookClass.json')
 

@@ -53,20 +53,16 @@ export default {
     }
   },
   created () {
-    this.getSearchClassApi()
   },
   methods: {
     async getSearchClassApi () {
-      try {
-        this.SearchClass = await getSearchClass()
-      } catch (err) {
-        console.error('getSearchClassApi', err)
-      }
+      this.SearchClass = await getSearchClass().then(res => res.json())
     },
     gotoAddress (name) {
       this.$router.push(name)
     },
     showSearch () {
+      this.getSearchClassApi()
       this.isShow = false
     },
     closeSearch () {

@@ -49,17 +49,29 @@ export default {
     async getSearchData () {
       this.keyword = this.$route.query.q
       if (this.keyword) {
-        let MusicRoot = await getMusicRoot(this.keyword).then(res => res.json())
-        this.MusicRoot = MusicRoot.musics
-        let BookRoot = await getBookRoot(this.keyword).then(res => res.json())
-        this.BookRoot = BookRoot.books
-        let MovieRoot = await getMovieRoot(this.keyword).then(res => res.json())
-        this.MovieRoot = MovieRoot.subjects
+        this.getMusicRootApi()
+        this.getBookRootApi()
+        this.getMovieRootApi()
       }
     },
     SearchResult () {
       this.getSearchData()
       this.ShowSearchClass = false
+    },
+    // 获取音乐
+    async getMusicRootApi () {
+      let MusicRoot = await getMusicRoot(this.keyword).then(res => res.json())
+      this.MusicRoot = MusicRoot.musics
+    },
+    // 获取读书
+    async getBookRootApi () {
+      let BookRoot = await getBookRoot(this.keyword).then(res => res.json())
+      this.BookRoot = BookRoot.books
+    },
+    // 获取电影
+    async getMovieRootApi () {
+      let BookRoot = await getMovieRoot(this.keyword).then(res => res.json())
+      this.BookRoot = BookRoot.books
     }
   }
 }

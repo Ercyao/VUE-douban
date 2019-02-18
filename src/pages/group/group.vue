@@ -25,15 +25,7 @@ export default {
   data () {
     return {
       showLoading: true,
-      Groups: [],
-      MovieFreeStream: null,
-      MovieLatest: null,
-      movieInterests: null,
-      MovieClass: null,
-      Groups1: null,
-      Groups2: null,
-      Groups3: null,
-      Groups4: null
+      Groups: []
     }
   },
   components: {
@@ -47,10 +39,14 @@ export default {
   },
   methods: {
     async getGroupData () {
-      let Groups = await getGroups().then(res => res.json())
-      this.Groups = Groups.rec_groups[0].classified_groups
+      await this.getGroupsApi()
 
       this.hideLoading()
+    },
+    // 获取小组
+    async getGroupsApi () {
+      let data = await getGroups().then(res => res.json())
+      this.Groups = data.rec_groups[0].classified_groups
     },
     hideLoading () {
       this.showLoading = false

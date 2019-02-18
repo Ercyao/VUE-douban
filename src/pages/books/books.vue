@@ -69,13 +69,22 @@ export default {
   },
   methods: {
     async getMovieData () {
-      // 最受关注图书 | 虚构类
+      this.getBookFictionApi()
+
+      this.hideLoading()
+    },
+    // 最受关注图书 | 虚构类
+    async getBookFictionApi () {
       let BookFiction = await getBookFiction().then(res => res.json())
       this.BookFiction = BookFiction.subject_collection_items
-      // 最受关注图书 | 非虚构类
+    },
+    // 最受关注图书 | 非虚构类
+    async getBookNoFictionApi () {
       let BookNoFiction = await getBookNoFiction().then(res => res.json())
       this.BookNoFiction = BookNoFiction.subject_collection_items
-      // 豆瓣书店
+    },
+    // 豆瓣书店
+    async getProductBookApi () {
       let ProductBook = await getProductBook().then(res => res.json())
       this.ProductBook = ProductBook.subject_collection_items
       let ProductBookHeader = ProductBook.header
@@ -84,13 +93,11 @@ export default {
       this.ProductBookHPrice = ProductBookHeader.price
       this.ProductBookHTitle = ProductBookHeader.title
       this.ProductBookHInfo = ProductBookHeader.info
-      // 发现好电影
-      let InterestsData = await getInterestsData().then(res => res.json())
-      this.booksInterests = InterestsData[0].books
-      // 分类浏览
-      this.BookClass = await getBookClass().then(res => res.json())
-
-      this.hideLoading()
+    },
+    // 发现好书
+    async getInterestsDatagApi () {
+      let data = await getInterestsData().then(res => res.json())
+      this.booksInterests = data[0].movie
     },
     hideLoading () {
       this.showLoading = false

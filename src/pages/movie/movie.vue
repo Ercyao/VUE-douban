@@ -22,14 +22,21 @@
 </template>
 
 <script>
-import columnBox from '@/components/column'
-import Category from '@/components/Category'
+import columnBox from '@/components/columnBox'
+import Category from '@/components/category'
 import loading from '@/components/loading'
 import headerNav from '@/components/header'
 import drownApp from '@/components/drownapp'
 import { getMovieShowing, getMovieFreeStream, getMovieLatest, getInterestsData, getMovieClass } from '@/store/API'
 
 export default {
+  components: {
+    headerNav,
+    drownApp,
+    loading,
+    Category,
+    columnBox
+  },
   data () {
     return {
       showLoading: true,
@@ -40,34 +47,43 @@ export default {
       MovieClass: null
     }
   },
-  components: {
-    headerNav,
-    drownApp,
-    loading,
-    Category,
-    columnBox
-  },
   created () {
     this.getMovieData()
   },
   methods: {
     async getMovieData () {
-      // 影院热映
-      let MovieShowing = await getMovieShowing().then(res => res.json())
-      this.MovieShowing = MovieShowing.subject_collection_items
-      // 免费在线观影
-      let MovieFreeStream = await getMovieFreeStream().then(res => res.json())
-      this.MovieFreeStream = MovieFreeStream.subject_collection_items
-      // 新片速递
-      let MovieLatest = await getMovieLatest().then(res => res.json())
-      this.MovieLatest = MovieLatest.subject_collection_items
-      // 发现好电影
-      let InterestsData = await getInterestsData().then(res => res.json())
-      this.movieInterests = InterestsData[0].movie
-      // 分类浏览
-      this.MovieClass = await getMovieClass().then(res => res.json())
+      await this.getMovieShowingApi()
+      this.getMovieFreeStreamApi()
+      this.getMovieLatestApi()
+      this.getInterestsDatagApi()
+      this.getMovieClassApi()
 
       this.hideLoading()
+    },
+    // 影院热映
+    async getMovieShowingApi () {
+      const data = await getMovieShowing().then(res => res.json())
+      this.MovieShowing = data.subject_collection_items
+    },
+    // 免费在线观影
+    async getMovieFreeStreamApi () {
+      const data = await getMovieFreeStream().then(res => res.json())
+      this.MovieFreeStream = data.subject_collection_items
+    },
+    // 新片速递
+    async getMovieLatestApi () {
+      const data = await getMovieLatest().then(res => res.json())
+      this.MovieLatest = data.subject_collection_items
+    },
+    // 发现好电影
+    async getInterestsDatagApi () {
+      const data = await getInterestsData().then(res => res.json())
+      this.movieInterests = data[0].movie
+    },
+    // 分类浏览
+    async getMovieClassApi () {
+      const data = await getMovieClass().then(res => res.json())
+      this.MovieClass = data
     },
     hideLoading () {
       this.showLoading = false

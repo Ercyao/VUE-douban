@@ -64,7 +64,7 @@ body .page {
 .tip-text{
   color: #999;
   text-align: center;
-  line-height: 40px;
   width: 100%;
+  line-height: 40px;
 }
 </style>

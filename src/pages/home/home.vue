@@ -10,12 +10,12 @@
         <li><a href="https://www.douban.com/doubanapp/app?channel=card_home&direct_dl=1">使用豆瓣App</a></li>
       </ul>
       <div class="recommend-box">
-        <div v-for="item in recommendData"
-             :key="item.id">
+        <div v-for="(item,index) in recommendData"
+             :key="index">
           <p class="time">{{item.time}}</p>
           <ul v-if="item.data && item.data.length > 0">
-            <li v-for="feed in item.data"
-                :key="feed.id">
+            <li v-for="(feed,findex) in item.data"
+                :key="findex">
               <a :href="feed.target.url">
                 <div class="recommend-content">
                   <div class="left">
@@ -57,6 +57,11 @@ import drownApp from '@/components/drownapp'
 import { getRecommend, getQuickData } from '@/store/API'
 
 export default {
+  components: {
+    headerNav,
+    drownApp,
+    loading
+  },
   data () {
     return {
       isShow: false,
@@ -69,11 +74,6 @@ export default {
         url: ''
       }
     }
-  },
-  components: {
-    headerNav,
-    drownApp,
-    loading
   },
   created () {
     this.getBookData()

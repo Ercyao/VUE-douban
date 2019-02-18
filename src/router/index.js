@@ -1,62 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-//import HelloWorld from '@/components/HelloWorld'
+import routes from './routes'
 
-import Home from '@/pages/home/home'
-import Movie from '@/pages/movie/movie'
-import Books from '@/pages/books/books'
-import Broadcast from '@/pages/broadcast/broadcast'
-import Group from '@/pages/group/group'
-import Search from '@/pages/search/search'
+// webpack提供的require.ensure()
+// vue-router配置路由，使用webpack的require.ensure技术，也可以实现按需加载。
+// 这种情况下，多个路由指定相同的chunkName，会合并打包成一个js文件
 
 Vue.use(Router)
-
-const routers = new Router({
-  routes: [
-    //地址为空时跳转movie页面
-    {
-      path: '',
-      redirect: '/home'
-    },
-    //首页
-    {
-      path: '/home',
-      name:'Home',
-      component: Home
-    },
-    //电影
-    {
-      path: '/movie',
-      name: 'Movie',
-      component: Movie
-    },
-    //图书
-    {
-      path: '/books',
-      name: 'Books',
-      component: Books
-    },
-    //广播
-    {
-      path: '/broadcast',
-      name: 'Broadcast',
-      component: Broadcast
-    },
-    //小组
-    {
-      path: '/group',
-      name: 'Group',
-      component: Group
-    },
-    //搜索
-    {
-      path: '/search',
-      name: 'Search',
-      component: Search
-    }
-  ]
+export default new Router({
+  mode: 'history',
+  routes
+  // base: '/h5/'
 })
-export  default  routers
-
-
-

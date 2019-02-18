@@ -1,5 +1,6 @@
 # vue-douban
 vue项目，豆瓣，配置代理服务器进行跨域
+( https://ercyao.github.io/VUE-douban/dist/index.html）
 
 # 技术栈
 vue2 + vue-router + less + ES6 + webpack + fetch

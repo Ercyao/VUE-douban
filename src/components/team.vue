@@ -13,7 +13,8 @@
         </li>
       </ul>
       <a href="#"
-         class="more_group">更多相关小组</a>
+         class="more_group"
+         @click="onMore">更多相关小组</a>
     </div>
     <div v-if="type === 'searchCover'">
       <ul class="content">
@@ -57,6 +58,11 @@ export default {
   components: { Rating },
   data () {
     return {}
+  },
+  methods: {
+    onMore () {
+      alert('未开发此功能~')
+    }
   }
 }
 </script>
